@@ -1,0 +1,38 @@
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.arrow {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    font-size: 56px;
+    font-family: cursive;
+    height: 100%;
+    cursor: pointer;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .arrow {
+        display: none;
+    }
+}
+
+.arrow:hover {
+    background-color: cadetblue;
+    opacity: 30%;
+}
+
+.dummy-child {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.arrow span {
+    user-select: none;
+}
