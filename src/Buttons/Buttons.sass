@@ -1,0 +1,30 @@
+.arrow
+  width: 100px
+  position: absolute
+  top: 0
+  font-size: 56px
+  font-family: cursive
+  height: 100%
+  cursor: pointer
+
+  &.right
+    right: 0
+
+  &.left
+    left: 0
+
+  &:hover
+    background-color: cadetblue
+    opacity: 30%
+
+  span
+    user-select: none
+
+@media only screen and (max-device-width: 768px)
+  .arrow
+    display: none
+
+.dummy-child
+  display: inline-block
+  vertical-align: middle
+  height: 100%

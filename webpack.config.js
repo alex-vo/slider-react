@@ -15,16 +15,23 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.css$/,
-                include: path.resolve(__dirname, 'src'),
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.(jpg)$/,
+                test: /\.jpg$/,
+                include: path.resolve(__dirname, 'img'),
                 use: {
                     // loader: 'url-loader',
                     loader: 'file-loader'
                 }
+            },
+            {
+                test: /\.sass$/,
+                include: path.resolve(__dirname, 'src'),
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader'
+                    },
+                ],
             }
         ]
     },

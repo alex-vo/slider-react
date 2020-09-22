@@ -1,5 +1,5 @@
 import React from "react";
-import './Breadcrumbs.css'
+import './Breadcrumbs.sass'
 
 class Breadcrumbs extends React.Component {
     constructor(props) {

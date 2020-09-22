@@ -1,5 +1,5 @@
 import React from "react";
-import './Slider.css'
+import './Slider.sass'
 import Buttons from "../Buttons/Buttons";
 
 class Slider extends React.Component {
