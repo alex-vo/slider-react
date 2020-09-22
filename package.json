@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Trololo\"",
     "serve": "webpack-dev-server --mode development"
   },
