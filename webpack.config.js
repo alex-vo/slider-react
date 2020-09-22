@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/index'),
@@ -26,7 +27,7 @@ module.exports = {
                 test: /\.sass$/,
                 include: path.resolve(__dirname, 'src'),
                 use: [
-                    'style-loader',
+                    process.env.PROD ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
                     {
                         loader: 'sass-loader'
@@ -42,6 +43,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "src/index.html" //source html
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
         })
     ]
 };
